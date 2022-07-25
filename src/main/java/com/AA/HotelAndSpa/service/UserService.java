@@ -1,0 +1,22 @@
+package com.AA.HotelAndSpa.service;
+
+import com.AA.HotelAndSpa.model.user.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+import java.util.Set;
+
+public interface UserService extends UserDetailsService {
+    User save(User user);
+
+    User findById(Long id);
+
+    User findByEmail(String email);
+
+    Set<User> findAll();
+
+    User update(Long id, User updatedUser);
+
+    void deleteById(Long id);
+
+    User changePassword(String newPassword, String currentPassword, String email);
+}
