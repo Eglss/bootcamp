@@ -26,8 +26,8 @@ public class HotelAndSpaApplication {
 	private Info apiInfo() {
 		Info info = new Info();
 		info
-				.title("Moonlight hotel")
-				.description("Swagger for Moonlight hotel API")
+				.title("Moonlight Hotel")
+				.description("Swagger for Moonlight Hotel APIs")
 				.version("v1.0.0");
 		return info;
 	}

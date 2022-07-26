@@ -2,6 +2,7 @@ package com.AA.HotelAndSpa.service;
 
 import com.AA.HotelAndSpa.exception.RecordBadRequestException;
 import com.AA.HotelAndSpa.model.reservation.RoomReservation;
+import com.AA.HotelAndSpa.model.user.Role;
 import com.AA.HotelAndSpa.model.user.User;
 import com.AA.HotelAndSpa.repository.RoomReservationRepository;
 import com.AA.HotelAndSpa.repository.UserRepository;
@@ -46,7 +47,7 @@ public class RoomReservationServiceImplTest {
     @BeforeEach
     public void setUp() {
         userService = new UserServiceImpl(userRepository, bCryptPasswordEncoder);
-        roomReservationService = new RoomReservationServiceImpl(userService, roomReservationRepository, roomReservationValidator);
+        roomReservationService = new RoomReservationServiceImpl(userService, roomReservationRepository);
     }
 
     @Test

@@ -14,13 +14,13 @@ public class RoomValidator {
 
     public void existById(Long id) {
         if (!roomRepository.existsById(id)) {
-            throw new RecordBadRequestException(String.format("Room with id:%s, not exists.", id));
+            throw new RecordBadRequestException(String.format("Room with id:%s, don't exists.", id));
         }
     }
 
     public void existsByTitle(RoomTitle roomTitle) {
         if (!roomRepository.existsByTitle(roomTitle)) {
-            throw new RecordBadRequestException(String.format("Room with Title:%s, not exists", roomTitle));
+            throw new RecordBadRequestException(String.format("Room with Title:%s, don't exists", roomTitle));
         }
     }
 }

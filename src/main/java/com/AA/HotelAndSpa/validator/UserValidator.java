@@ -16,14 +16,14 @@ public class UserValidator {
     public void userExistById(Long id) {
         Objects.requireNonNull(id);
         if (!userRepository.existsById(id)) {
-            throw new RecordNotFoundException("User with id:%s, not exists.");
+            throw new RecordNotFoundException("User with id:%s, don't exists.");
         }
     }
 
     public void emailDuplicate(String email) {
         Objects.requireNonNull(email);
         if (!userRepository.existsByEmail(email)) {
-            throw new RecordNotFoundException("User with email:%s, not exists.");
+            throw new RecordNotFoundException("User with email:%s, don't exists.");
         }
     }
 }
